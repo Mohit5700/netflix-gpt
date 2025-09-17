@@ -1,67 +1,106 @@
-🎬 Netflix GPT
+# 🎬 Netflix GPT
 
 An AI-powered movie discovery web app inspired by Netflix.
-Built with React, Tailwind CSS, Redux Toolkit, Firebase, TMDB API, and Google Gemini for AI movie suggestions.
+Built with **React**, **Tailwind CSS**, **Redux Toolkit**, **Firebase**, **TMDB API**, and **Google Gemini** for AI movie suggestions.
 
-🚀 Tech Stack
+---
 
-Frontend: React, Redux Toolkit, Tailwind CSS
+## 🚀 Tech Stack
 
-Backend / Auth: Firebase Authentication
+* **Frontend**: React, Redux Toolkit, Tailwind CSS
+* **Backend / Auth**: Firebase Authentication
+* **APIs**:
 
-APIs:
+  * [TMDB](https://www.themoviedb.org/) – movie data & trailers
+  * [Google Gemini](https://ai.google.dev/) – AI movie recommendations
 
-TMDB
-– movie data & trailers
+---
 
-Google Gemini
-– AI movie recommendations
+## ✨ Features
 
-✨ Features
-🔑 Authentication
+### 🔑 Authentication
 
-Secure Sign Up / Login using Firebase
+* Secure **Sign Up** / **Login** using Firebase
+* Profile update & persistent sessions
+* Route protection (auto-redirects if not logged in)
 
-Profile update & persistent sessions
+### 🎥 Browse Page
 
-Route protection (auto-redirects if not logged in)
+* Dynamic **Header** with sign-out and language selector
+* Hero section with **autoplay background trailer** (muted)
+* Multiple **movie carousels**: Now Playing, Popular, Top Rated, Upcoming
+* Fully **responsive** design for mobile, tablet, and desktop
 
-🎥 Browse Page
+### 🤖 Netflix GPT
 
-Dynamic Header with sign-out and language selector
+* **AI Search Bar** powered by Google Gemini
+* **Multi-language support** (English, Hindi, Spanish, French, German, Japanese…)
+* Personalized **“AI Picks”** section with smart movie recommendations
 
-Hero section with autoplay background trailer (muted)
+---
 
-Multiple movie carousels: Now Playing, Popular, Top Rated, Upcoming
+## 🛠️ Development Highlights
 
-Fully responsive design for mobile, tablet, and desktop
+* Bootstrapped with `create-react-app`
+* Configured **Tailwind CSS** for styling
+* Built reusable components: `Header`, `MovieList`, `GPTWelcomeMessage`, etc.
+* Managed global state with **Redux slices** (`userSlice`, `moviesSlice`, `gptSlice`)
+* Created custom React hooks for fetching:
 
-🤖 Netflix GPT
+  * Now-Playing Movies
+  * Category-wise movie data
+  * Trailer video
+* Implemented memoization for performance
+* Secured API keys with `.env` and added `.gitignore`
 
-AI Search Bar powered by Google Gemini
+---
 
-Multi-language support (English, Hindi, Spanish, French, German, Japanese…)
+## 📦 Setup & Installation
 
-Personalized “AI Picks” section with smart movie recommendations
+1. **Clone the repo**
 
-🛠️ Development Highlights
+   ```bash
+   git clone https://github.com/<your-username>/netflix-gpt.git
+   cd netflix-gpt
+   ```
 
-Bootstrapped with create-react-app
+2. **Install dependencies**
 
-Configured Tailwind CSS for styling
+   ```bash
+   npm install
+   ```
 
-Built reusable components: Header, MovieList, GPTWelcomeMessage, etc.
+3. **Environment variables** – create a `.env` file:
 
-Managed global state with Redux slices (userSlice, moviesSlice, gptSlice)
+   ```
+   REACT_APP_TMDB_API_KEY=your_tmdb_key
+   REACT_APP_GEMINI_API_KEY=your_gemini_key
+   ```
 
-Created custom React hooks for fetching:
+4. **Run locally**
 
-Now-Playing Movies
+   ```bash
+   npm start
+   ```
 
-Category-wise movie data
+5. **Build for production**
 
-Trailer video
+   ```bash
+   npm run build
+   ```
 
-Implemented memoization for performance
+---
 
-Secured API keys with .env and added .gitignore
+## 📚 Learning Takeaways
+
+* Deep dive into **React + Redux Toolkit** architecture
+* Integration of multiple third-party APIs
+* Handling authentication flows and route protection
+* Implementing **internationalization (i18n)**
+* Real-world app deployment to production
+
+---
+
+**Enjoy discovering movies with AI! 🍿🚀**
+* Replace `<your-username>` with your GitHub handle.
+* Add screenshots/GIFs for extra polish.
